@@ -10,20 +10,20 @@ try {
   $conn = DB::connection();
 
   try {
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $pass = $_POST['pass'];
 
     try {
-      $select = "SELECT id,username FROM users WHERE username = '{$username}' and pass = '{$pass}'";
-      $r = $conn->query($select)->fetchAll();
+      $select = "SELECT idPessoa,email FROM pessoa WHERE email = '{$email}' and senha = '{$pass}'";
+      $r = $conn->query($select)->fetch_all(MYSQLI_ASSOC);
 
 
-      $key = 'reddit';
+      $key = 'prova';
       $payload = [
           'exp' => strtotime('+5day'),
           'iat' => time(),
-          'userID' => $r[0]['id'],
-          'username' => $r[0]['username']
+          'userID' => $r[0]['idPessoa'],
+          'email' => $r[0]['email']
       ];
 
       try {

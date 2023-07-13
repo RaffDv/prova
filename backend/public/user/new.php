@@ -7,7 +7,6 @@ try {
   $conx = DB::connection();
 
   try { // get data
-    $username = $_POST['username'];
     $email = $_POST['email'];
     $pass = $_POST['pass'];
 
@@ -16,7 +15,7 @@ try {
       if($email != '')
       {
         if ($pass != '') {
-          $insert = "INSERT INTO users(username,email,pass) VALUES ('{$username}','{$email}','{$pass}');";
+          $insert = "INSERT INTO pessoa(email,senha) VALUES ('{$email}','{$pass}');";
           $conx->query($insert);
     
           $status = 200;
