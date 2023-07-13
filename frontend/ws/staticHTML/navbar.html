@@ -1,0 +1,35 @@
+<style>
+  nav {
+    display: flex;
+    position: absolute;
+    top: 0rem;
+    gap: 6px;
+    margin: 12px;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px 8px;
+    transition: all 3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+    background: rgba(155, 155, 155, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2.5px);
+    border-radius: 5px;
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+  }
+
+  a:hover {
+    color: rgba(255, 255, 255, 0.452);
+  }
+</style>
+<nav>
+  <a href="/frontend/src/pages/user/forms/index.html">Login</a>
+  <a href="/frontend/src/pages/posts/index.html">Post</a>
+</nav>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>reddit 2</title>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <div id="navbar"></div>
+    </header>
+
+    <div class="wrapper">
+      <div class="card-switch">
+        <label class="switch">
+          <input type="checkbox" class="toggle">
+          <span class="slider"></span>
+          <span class="card-side"></span>
+          <div class="flip-card__inner">
+
+            <div class="flip-card__front">
+              <div class="title">Log in</div>
+              <form class="flip-card__form" id="loginForm">
+                <input required class="flip-card__input" name="username" placeholder="Username" type="text">
+                <input required class="flip-card__input" name="pass" placeholder="Password" type="password">
+                <button class="flip-card__btn loginBtn">Let`s go!</button>
+              </form>
+            </div>
+
+            <div class="flip-card__back">
+              <div class="title">Sign up</div>
+              <form class="flip-card__form" id="registerForm">
+                <input required class="flip-card__input" placeholder="username" name="username" type="username">
+                <input required class="flip-card__input" name="email" placeholder="Email" type="email">
+                <input required class="flip-card__input" name="pass" placeholder="Password" type="password">
+                <button class="flip-card__btn createBtn">Confirm!</button>
+              </form>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+      <script type="module" src="main.js" defer></script>
+    </div>
+  </main>
+
+</body>
+
+</html>

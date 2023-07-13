@@ -1,0 +1,17 @@
+{
+    "name": "reddit/reddit",
+    "type": "project",
+    "require": {
+        "firebase/php-jwt": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reddit\\Reddit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raff"
+        }
+    ]
+}
