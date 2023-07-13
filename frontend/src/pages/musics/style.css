@@ -4,13 +4,16 @@
    box-sizing: border-box;
 }
 body{
-   background-color: rgba(0, 0, 0, 0.767);
+   background-image: url(/frontend/src/assets/background-7716491_1920.png);
 }
 
 .container{
    display: flex;
+   flex-direction: column;
    justify-content: center;
+   align-items: center;
    margin-top: 1.4rem;
+   position: relative;
 }
 .titulo-play{
    display: flex;
@@ -23,4 +26,16 @@ body{
    background-clip: text;
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
+}
+.button{
+   position: absolute;
+   right: 1%;
+   top: 1%  ;
+}
+.button a button{
+   width: 100px;  
+   height: 30px;
+   background-color: black;
+   color: yellow;
+   
 }

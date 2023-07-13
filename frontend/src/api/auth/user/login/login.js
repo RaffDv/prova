@@ -9,12 +9,12 @@ if (!Cookies.get('token')) {
   console.log(Cookies.get());
 
   if (Cookies.get('token')) {
-    window.location.href = '/frontend/src/pages/posts/index.html'
+    window.location.href = '/frontend/src/pages/musics'
   }
 
 } else {
   console.log('token existe');
-  window.location.href = '/frontend/src/pages/posts/index.html'
+  window.location.href = '/frontend/src/pages/musics'
 
 }
 

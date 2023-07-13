@@ -12,12 +12,11 @@ try {
     $conx = DB::connection();
     
     try {
-      $title = $_POST['title'];
-      $content = $_POST['content'];
+      $musicaID = $_POST['musicaID'];
       $owner_token = $_POST['owner_token'];
       
       try {
-        $key = 'reddit';
+        $key = 'prova';
         $decoded = JWT::decode($owner_token, new Key($key, 'HS256'));
         $token = $decoded;
         $userID = $token->userID;
@@ -25,7 +24,7 @@ try {
         try {
           try {
             if ($token != null){
-              $insert = "INSERT INTO posts(user_id,title,content) VALUES ('{$userID}','{$title}','{$content}')";
+              $insert = "INSERT INTO pessoa_musica(idPessoa,idMusica) VALUES ('{$userID}','{$musicaID}')";
             }
           } catch (\Throwable $th) {
             throw $th;

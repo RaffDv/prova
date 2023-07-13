@@ -11,18 +11,22 @@
 
 <body>
   <div class="container">
-  <div class="pesquisa"></div>
-    <form method="GET" action="pesquisa.php">
-    <input type="text" name="query" placeholder="Pesquisar...">
+  <div class="button">
+    <a href="/frontend/src/api/auth/user/logout/void.html"><button>Logout</button></a>
+</div>    
+<div class="pesquisa">
+    <form id="formulario_pesquisa">
+    <input type="text" name="ano" value="" placeholder="ano">
+    <input type="text" name="artista" value="" placeholder="artista">
+    <input type="text" name="titulo" value="" placeholder="titulo">
     <button type="submit">Pesquisar</button>
   </form>
 </div>
-  <br>
   <div class="titulo-play">
   <h1>minha playlist: </h1>
 </div>
 
 </div>
 </body>
-
+<script src="script.js" type="module"></script>
 </html>

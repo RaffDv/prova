@@ -23,7 +23,7 @@ registerBtn.addEventListener('click', async event => {
   event.preventDefault();
   let formData = new FormData(formRegister);
 
-  await POST('user/create.php', formData)
+  await POST('user/new.php', formData)
     .then(data => data.json())
     .then(item => {
       if (item.msg.includes('code 1062')) {
