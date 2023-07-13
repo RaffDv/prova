@@ -1,0 +1,26 @@
+*{
+   margin: 0;
+   padding: 0; 
+   box-sizing: border-box;
+}
+body{
+   background-color: rgba(0, 0, 0, 0.767);
+}
+
+.container{
+   display: flex;
+   justify-content: center;
+   margin-top: 1.4rem;
+}
+.titulo-play{
+   display: flex;
+   justify-content: center;
+   margin-top: 1.5rem
+}
+.titulo-play h1{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   background-image: linear-gradient(to bottom, rgb(7, 255, 110),  rgb(0, 162, 255));
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
