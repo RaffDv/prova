@@ -4,7 +4,7 @@ class DB
 {
 
   public static function connection() {
-    $conn = new mysqli("localhost", "root", "", "playlists");
+    $conn = new mysqli("localhost", "root", "secret", "playlists");
     return $conn;
     try {
        

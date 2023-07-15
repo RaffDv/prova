@@ -12,9 +12,9 @@ try {
     $conx = DB::connection();
     
     try {
-      $musicaID = $_POST['musicaID'];
-      $owner_token = $_POST['owner_token'];
-      
+      $musicaID = isset($_POST['musicaID'])?$_POST['musicaID']:false;
+      $owner_token = isset($_POST['owner_token'])?$_POST['owner_token']:false;
+
       try {
         $key = 'prova';
         $decoded = JWT::decode($owner_token, new Key($key, 'HS256'));
@@ -24,19 +24,19 @@ try {
         try {
           try {
             if ($token != null){
-              $insert = "INSERT INTO pessoa_musica(idPessoa,idMusica) VALUES ('{$userID}','{$musicaID}')";
+              $delete = "DELETE FROM pessoa_musica WHERE idPessoa = '{$userID}' and idMusica = '{$musicaID}'";
             }
           } catch (\Throwable $th) {
             throw $th;
             die('mount query fail');
           }
           
-          $conx->query($insert);
+          $conx->query($delete);
           $status = 200;
           $response = ['msg' => 'success'];
         } catch (Exception $e) {
           $status = 401;
-          $response = ['msg' => 'query failed', 'err' => $e->getMessage()];
+          $response = ['msg' => 'query failed', 'err' => $e->getMessage(),'query' => $delete];
         }
       } catch (Exception $e) {
         $status = 401;

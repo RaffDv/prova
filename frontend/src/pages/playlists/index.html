@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>SpotIFy</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div id="navbar"></div>
+    </header>
+
+    <form id="pesquisa-pl">
+      <label for="userEmail">Email do usuário que deseja buscar a playlist</label>
+      <input type="text" id="userEmail" name="userEmail">
+      <button>Pesquisar</button>
+    </form>
+
+
+    <div class="conteudo">
+      <div class="minha-pl">
+        <h2> Playlist do usuário</h2>
+        <span class="userEmail"></span>
+        <div id="lista"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="./script.js" type="module"></script>
+
+</html>

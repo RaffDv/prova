@@ -7,11 +7,9 @@ use Firebase\JWT\Key;
 
 function decode(string $token) {
   try {
-    $key = 'reddit';
-    $decoded = JWT::decode($token, new Key($key, 'HS256'));
-    $token = $decoded;
-    $userID = $token->userID;
-    return $userID;
+    $key = 'prova';
+    $data = JWT::decode($token, new Key($key, 'HS256'));
+    return $data;
   } catch (Exception $e) {
     return false;
   }

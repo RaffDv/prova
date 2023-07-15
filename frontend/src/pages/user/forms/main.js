@@ -3,7 +3,7 @@ import { POST } from '../../../../ws/api/index.js'
 window.addEventListener('DOMContentLoaded', function () {
   var navbarContainer = document.querySelector('#navbar');
 
-  fetch('./../../../../ws/staticHTML/navbar.html')
+  fetch('/frontend/ws/staticHTML/navbar.html')
     .then(function (response) {
       return response.text();
     })
@@ -34,7 +34,6 @@ registerBtn.addEventListener('click', async event => {
     )
     .catch(err => console.error(err))
   const r = await POST('user/login.php', formData).then(data => data.json()).catch(err => console.error(err))
-  console.log(r);
   if (r.token) {
     window.location.href = `/frontend/src/api/auth/user/login/void.html?token=${r.token}`
   }
